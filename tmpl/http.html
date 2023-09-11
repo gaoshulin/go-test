@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <p>Hello {{.Name}}</p>
+    <p>性别：{{.Gender}}</p>
+    <p>年龄：{{.Age}}</p>
+</div>
+
+<div>
+    <hr>
+    <h1>测试嵌套template语法</h1>
+    <hr>
+    {{template "http-ul.html"}}
+    <hr>
+    {{template "http-ol.html"}}
+</div>
+
+</body>
+</html>
+
+{{ define "http-ol.html"}}
+<h1>这是ol.html</h1>
+<ol>
+    <li>吃饭</li>
+    <li>睡觉</li>
+    <li>打豆豆</li>
+</ol>
+{{end}}
